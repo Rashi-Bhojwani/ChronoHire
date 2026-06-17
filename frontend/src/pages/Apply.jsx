@@ -39,7 +39,7 @@ export default function ApplyPage({ setPage }) {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/jobs/apply",
+        "/api/jobs/apply",
         {
           method: "POST",
           body: formData,
