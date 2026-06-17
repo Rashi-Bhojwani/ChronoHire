@@ -9,7 +9,7 @@ const { useState, useEffect, useRef } = React;
 export default function HomePage({ setPage }) {
 
     useEffect(() => {
-      window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
 
     return (
@@ -53,7 +53,7 @@ export default function HomePage({ setPage }) {
                         <div className="hero-image-bg"></div>
 
                         <img
-                            src="/public/images/hero.png"
+                            src="/images/hero.png"
                             alt="ChronoHire Recruitment"
                             className="hero-image"
                         />
