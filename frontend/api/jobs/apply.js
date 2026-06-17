@@ -60,7 +60,7 @@ export default async function handler(req, res) {
     }
 
     const result = await resend.emails.send({
-      from: "ChronoHire <onboarding@resend.dev>",
+      from: "ChronoHire <hr@chronohire.com>",
       to: process.env.COMPANY_EMAIL,
       subject: `New Job Application - ${position}`,
 
