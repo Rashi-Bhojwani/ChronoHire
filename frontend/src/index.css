@@ -163,7 +163,7 @@
     min-height: 100vh;
     background: linear-gradient(145deg, #f0fdfa 0%, #ffffff 50%, #f8fafb 100%);
     display: flex; align-items: center;
-    padding: 80px 24px 80px;
+    padding: 120px 24px 80px;
     position: relative; overflow: hidden;
   }
   .hero::before {
@@ -488,6 +488,19 @@
   .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .footer-links li { font-size: .83rem; color: rgba(255,255,255,.45); cursor: pointer; transition: color .2s; }
   .footer-links li:hover { color: var(--teal-light); }
+  .footer-links button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.footer-links button:hover {
+  color: var(--primary);
+}
   .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; }
   .footer-contact-icon { color: var(--teal-light); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
   .footer-contact-text { font-size: .83rem; color: rgba(255,255,255,.45); line-height: 1.5; }

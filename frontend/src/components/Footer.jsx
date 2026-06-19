@@ -1,98 +1,117 @@
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-export default function Footer({ setPage }) {
+export default function Footer() {
+  const navigate = useNavigate();
+
+  const goTo = (path) => {
+    navigate(path);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-grid">
 
-        {/* 1. Brand */}
+        {/* Brand */}
         <div className="footer-brand">
-          <div className="nav-logo" onClick={() => setPage('home')} style={{ cursor: 'pointer', marginBottom: 0 }}>
+          <div
+            className="nav-logo"
+            onClick={() => goTo("/")}
+            style={{ cursor: "pointer", marginBottom: 0 }}
+          >
             <div className="nav-logo-icon">
               <img src="/images/logo.PNG" alt="ChronoHire Logo" />
             </div>
           </div>
+
           <p>
-            A premier recruitment and HR consulting firm connecting companies with the right talent and helping professionals build successful careers. Fast. Precise. Reliable.
+            A premier recruitment and HR consulting firm connecting companies
+            with the right talent and helping professionals build successful
+            careers. Fast. Precise. Reliable.
           </p>
         </div>
 
-        {/* 2. Quick Links */}
+        {/* Quick Links */}
         <div className="footer-col">
           <h4>Quick Links</h4>
-          <ul className="footer-links">
-            {['Home', 'About Us', 'Services', 'Job Listings', 'Contact'].map(l => (
-              <li
-                key={l}
-                onClick={() => {
-                  setPage(
-                    l === 'Job Listings'
-                      ? 'jobs'
-                      : l === 'About Us'
-                        ? 'about'
-                        : l.toLowerCase()
-                  );
 
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  });
-                }}
-              >
-                {l}
-              </li>
-            ))}
+          <ul className="footer-links">
+            <li><button onClick={() => goTo("/")}>Home</button></li>
+            <li><button onClick={() => goTo("/about")}>About Us</button></li>
+            <li><button onClick={() => goTo("/services")}>Services</button></li>
+            <li><button onClick={() => goTo("/jobs")}>Job Listings</button></li>
+            <li><button onClick={() => goTo("/contact")}>Contact</button></li>
           </ul>
         </div>
 
-        {/* 3. Contact */}
+        {/* Contact */}
         <div className="footer-col">
           <h4>Get In Touch</h4>
+
           <div className="footer-contact-item">
             <span className="footer-contact-icon">📞</span>
-            <div className="footer-contact-text">+91 97140 27997</div>
+            <a
+              href="tel:+919714027997"
+              className="footer-contact-text"
+            >
+              +91 97140 27997
+            </a>
           </div>
+
           <div className="footer-contact-item">
             <span className="footer-contact-icon">✉️</span>
-            <div className="footer-contact-text">hr@chronohire.com</div>
+            <a
+              href="mailto:hr@chronohire.com"
+              className="footer-contact-text"
+            >
+              hr@chronohire.com
+            </a>
           </div>
+
           <div className="footer-contact-item">
             <span className="footer-contact-icon">📍</span>
-            <div className="footer-contact-text">Ahemdabad, Gujarat, India</div>
+            <a
+              href="https://maps.google.com/?q=Ahmedabad,Gujarat,India"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-contact-text"
+            >
+              Ahmedabad, Gujarat, India
+            </a>
           </div>
         </div>
 
-        {/* 4. Social Icons (NEW COLUMN) */}
+        {/* Social */}
         <div className="footer-col footer-social-col">
           <h4>Follow Us</h4>
 
-<div className="flex flex-col gap-3">
-  <a
-    href="https://linkedin.com/company/your-company"
-    target="_blank"
-    rel="noreferrer"
-    className="flex items-center gap-2"
-  >
-    <i className="fab fa-linkedin"></i>
-    LinkedIn
-  </a>
+          <div className="flex flex-col gap-3">
+            <a
+              href="https://linkedin.com/company/chronohire-consulting/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
 
-  <a
-    href="/RecruitmentBrochure .pdf"
-    target="_blank"
-    rel="noreferrer"
-    className="flex items-center gap-2"
-  >
-    📄 E-Brochure
-  </a>
-</div>
+            <a
+              href="/RecruitmentBrochure .pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              E-Brochure
+            </a>
+          </div>
         </div>
 
       </div>
 
       <div className="footer-bottom">
         <p>© 2025 ChronoHire. All rights reserved.</p>
-        <p>Privacy Policy &nbsp;|&nbsp; Terms of Service</p>
+        <p>Privacy Policy | Terms of Service</p>
       </div>
     </footer>
   );

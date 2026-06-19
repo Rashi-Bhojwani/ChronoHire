@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import JobCard from "../components/JobCard";
@@ -6,7 +7,9 @@ import { JOBS, TESTIMONIALS } from "../data/jobs";
 const { useState, useEffect, useRef } = React;
 
 
-export default function HomePage({ setPage }) {
+export default function HomePage() {
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -30,8 +33,14 @@ export default function HomePage({ setPage }) {
                             ChronoHire connects top-tier talent with ambitious companies through precise, reliable, and time-efficient recruitment. We don't just fill positions — we build teams.
                         </p>
                         <div className="hero-btns fade-up delay-3">
-                            <button className="btn-primary" onClick={() => setPage('contact')}>Request Talent →</button>
-                            <button className="btn-outline" onClick={() => setPage('jobs')}>Browse Jobs</button>
+                            <button
+                                className="btn-primary"
+                                onClick={() => navigate("/contact")}
+                            >Request Talent →</button>
+                            <button
+                                className="btn-outline"
+                                onClick={() => navigate("/jobs")}
+                            >Browse Jobs</button>
                         </div>
                         <div className="hero-stats fade-up delay-4">
                             <div>
@@ -119,7 +128,7 @@ export default function HomePage({ setPage }) {
                                 <button
                                     className="btn-primary"
                                     onClick={() => {
-                                        setPage("about");
+                                        navigate("/about");
 
                                         setTimeout(() => {
                                             document
@@ -197,9 +206,11 @@ export default function HomePage({ setPage }) {
                                             s.title.toLowerCase().replace(/\s+/g, "-")
                                         );
 
-                                        setPage("services");
+                                        navigate("/services");
                                     }}
-                                >Learn more <span>→</span></div>
+                                >
+                                    Learn more <span>→</span>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -208,7 +219,7 @@ export default function HomePage({ setPage }) {
                             className="btn-primary"
                             onClick={() => {
                                 localStorage.setItem("scrollToService", "top");
-                                setPage("services");
+                                navigate("/services");
                             }}
                         >
                             View All Services →
@@ -279,8 +290,8 @@ export default function HomePage({ setPage }) {
                     <h2>Ready to Build Your Dream Team?</h2>
                     <p>Partner with ChronoHire and experience recruitment that's Fast, Precise, and Reliable. Let's get started today.</p>
                     <div className="cta-btns">
-                        <button className="btn-white" onClick={() => setPage('contact')}>Request Talent</button>
-                        <button className="btn-outline" style={{ borderColor: 'rgba(255,255,255,.4)', color: 'white' }} onClick={() => setPage('jobs')}>Browse Jobs</button>
+                        <button className="btn-white" onClick={() => navigate("/contact")}>Request Talent</button>
+                        <button className="btn-outline" style={{ borderColor: 'rgba(255,255,255,.4)', color: 'white' }} onClick={() => navigate("/jobs")}>Browse Jobs</button>
                     </div>
                 </div>
             </div>

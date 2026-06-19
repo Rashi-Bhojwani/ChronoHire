@@ -1,6 +1,10 @@
 import { useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
-export default function ServicesPage({ setPage }) {
+export default function ServicesPage() {
+
+  const navigate = useNavigate();
+
   const services = [
     {
       icon: '/images/PermanentStaffing.PNG',
@@ -76,39 +80,38 @@ export default function ServicesPage({ setPage }) {
   ];
 
   useEffect(() => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}, []);
+    if (!localStorage.getItem("scrollToService")) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
   useEffect(() => {
-  const target = localStorage.getItem("scrollToService");
+    const target = localStorage.getItem("scrollToService");
 
-  if (target) {
-    setTimeout(() => {
-      if (target === "top") {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      } else {
-        document.getElementById(target)?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
+    if (target) {
+      setTimeout(() => {
+        if (target === "top") {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        } else {
+          document.getElementById(target)?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
 
-      localStorage.removeItem("scrollToService");
-    }, 100);
-  }
-}, []);
+        localStorage.removeItem("scrollToService");
+      }, 100);
+    }
+  }, []);
 
   return (
     <>
       <div className="page-hero">
         <div className="breadcrumb">
-          <a onClick={() => setPage('home')}>Home</a>
+          <Link to="/">Home</Link>
           <span>/</span>
           <span style={{ color: 'rgba(255,255,255,.6)' }}>Services</span>
         </div>
@@ -148,7 +151,7 @@ export default function ServicesPage({ setPage }) {
 
                 <button
                   className="btn-primary"
-                  onClick={() => setPage('contact')}
+                  onClick={() => navigate("/contact")}
                 >
                   Enquire About This Service →
                 </button>
@@ -173,7 +176,7 @@ export default function ServicesPage({ setPage }) {
           <div className="cta-btns">
             <button
               className="btn-white"
-              onClick={() => setPage('contact')}
+              onClick={() => navigate("/contact")}
             >
               Schedule a Consultation
             </button>

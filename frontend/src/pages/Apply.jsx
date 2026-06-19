@@ -1,6 +1,10 @@
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
-export default function ApplyPage({ setPage }) {
+export default function ApplyPage() {
+
+  const navigate = useNavigate();
+
   const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', experience: '', position: '', message: '', file: null });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -77,7 +81,11 @@ export default function ApplyPage({ setPage }) {
   return (
     <>
       <div className="page-hero">
-        <div className="breadcrumb"><a onClick={() => setPage('home')}>Home</a><span>/</span><span style={{ color: 'rgba(255,255,255,.6)' }}>Apply</span></div>
+        <div className="breadcrumb">
+          <Link to="/">Home</Link>
+          <span>/</span>
+          <span style={{ color: "rgba(255,255,255,.6)" }}>Apply</span>
+        </div>
         <h1>Apply for a Position</h1>
         <p>Take the next step in your career. Submit your application and our team will be in touch within 2 business days.</p>
       </div>
@@ -96,7 +104,13 @@ export default function ApplyPage({ setPage }) {
                   <p style={{ fontWeight: 400, color: '#166534', fontSize: '.875rem' }}>
                     Thank you {candidateName}. Our team will review your application and contact you soon.
                   </p>
-                  <button className="btn-primary" style={{ marginTop: 20 }} onClick={() => setPage('jobs')}>Browse More Jobs</button>
+                  <button
+                    className="btn-primary"
+                    style={{ marginTop: 20 }}
+                    onClick={() => navigate("/jobs")}
+                  >
+                    Browse More Jobs
+                  </button>
                 </div>
               ) : (
                 <div className="form-grid">

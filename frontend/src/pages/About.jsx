@@ -1,7 +1,10 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+export default function AboutPage() {
 
-export default function AboutPage({ setPage }) {
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -10,7 +13,7 @@ export default function AboutPage({ setPage }) {
   return (
     <>
       <div className="page-hero">
-        <div className="breadcrumb"><a onClick={() => setPage('home')}>Home</a><span>/</span><span style={{ color: 'rgba(255,255,255,.6)' }}>About Us</span></div>
+        <div className="breadcrumb"><Link to="/">Home</Link><span>/</span><span style={{ color: 'rgba(255,255,255,.6)' }}>About Us</span></div>
         <h1>About ChronoHire</h1>
         <p>Our story, mission, and the people behind every successful placement.</p>
       </div>
@@ -108,8 +111,19 @@ export default function AboutPage({ setPage }) {
           <h2>Let's Build Something Great Together</h2>
           <p>Whether you're hiring your first employee or your hundredth, ChronoHire is the partner you need.</p>
           <div className="cta-btns">
-            <button className="btn-white" onClick={() => setPage('contact')}>Get In Touch</button>
-            <button className="btn-outline" style={{ borderColor: 'rgba(255,255,255,.4)', color: 'white' }} onClick={() => setPage('jobs')}>View Opportunities</button>
+            <button
+              className="btn-white"
+              onClick={() => navigate("/contact")}
+            >
+              Get In Touch
+            </button>
+            <button
+              className="btn-outline"
+              style={{ borderColor: "rgba(255,255,255,.4)", color: "white" }}
+              onClick={() => navigate("/jobs")}
+            >
+              View Opportunities
+            </button>
           </div>
         </div>
       </div>
