@@ -23,14 +23,14 @@ export default function HomePage() {
                     <div>
                         <div className="hero-badge fade-in">
                             <span className="hero-badge-dot" />
-                            India's Fast-Growing Recruitment Partner
+                            India's Fast-Growing Recruitment Agency
                         </div>
                         <h1 className="hero-heading fade-up delay-1">
                             Hire Smarter,<br />
                             <span className="teal">Grow Faster</span>
                         </h1>
                         <p className="hero-sub fade-up delay-2">
-                            ChronoHire connects top-tier talent with ambitious companies through precise, reliable, and time-efficient recruitment. We don't just fill positions — we build teams.
+                            ChronoHire is a recruitment agency in India connecting top-tier talent with ambitious companies through precise, reliable, and time-efficient hiring solutions. As a trusted job consultancy and staffing partner, we don't just fill open positions — we build teams that drive long-term business growth.
                         </p>
                         <div className="hero-btns fade-up delay-3">
                             <button
@@ -63,7 +63,7 @@ export default function HomePage() {
 
                         <img
                             src="/images/hero.png"
-                            alt="ChronoHire Recruitment"
+                            alt="ChronoHire recruitment agency in India helping companies with talent acquisition and hiring solutions"
                             className="hero-image"
                         />
 
@@ -117,10 +117,10 @@ export default function HomePage() {
                             <div className="section-label">About ChronoHire</div>
                             <h2 className="section-heading">We Build Teams That Drive Results</h2>
                             <p className="section-sub">
-                                ChronoHire is a professional recruitment firm committed to helping organisations hire skilled, qualified professionals. We work closely with companies to deeply understand their hiring needs and connect them with candidates who match requirements and culture.
+                                ChronoHire is a professional recruitment company committed to helping organisations across India hire skilled, qualified professionals. As a dedicated talent acquisition and HR consulting partner, we work closely with companies to deeply understand their hiring needs and connect them with candidates who match both role requirements and company culture.
                             </p>
                             <ul className="about-list">
-                                {['Industry-specific hiring expertise across 15+ sectors', 'Quality-screened, interview-ready candidates', 'Dedicated recruitment partner for each client', 'Confidential executive search capabilities', 'End-to-end RPO and HR consulting support'].map(item => (
+                                {['Industry-specific recruitment expertise across 15+ sectors', 'Quality-screened, interview-ready candidates for every role', 'Dedicated hiring partner for each client relationship', 'Confidential executive search and leadership hiring capabilities', 'End-to-end recruitment process outsourcing and HR consulting support'].map(item => (
                                     <li key={item}><span className="about-check">✓</span>{item}</li>
                                 ))}
                             </ul>
@@ -154,44 +154,44 @@ export default function HomePage() {
                     <div className="text-center">
                         <div className="section-label" style={{ margin: '0 auto 16px' }}>What We Do</div>
                         <h2 className="section-heading">Recruitment Solutions<br />Built for Your Scale</h2>
-                        <p className="section-sub">From entry-level hiring to C-suite executive search, we cover every tier of your talent pipeline with precision.</p>
+                        <p className="section-sub">From entry-level hiring to C-suite executive search, our recruitment and staffing services cover every tier of your talent pipeline with precision and care.</p>
                     </div>
                     <div className="services-grid">
                         {[
                             {
                                 icon: '👔',
                                 title: 'Permanent Staffing',
-                                desc: 'We identify, screen, and hire full-time professionals who fit your organisation’s needs, culture, and long-term goals.'
+                                desc: "We identify, screen, and hire full-time professionals who fit your organisation's needs, culture, and long-term growth goals, making us a reliable staffing services partner."
                             },
 
                             {
                                 icon: '💡',
                                 title: 'HR Consulting',
-                                desc: 'Strategic HR advisory covering workforce planning, policy design, compliance, and organisational development.'
+                                desc: 'Strategic HR consulting covering workforce planning, policy design, compliance, and organisational development to strengthen your hiring solutions from the inside out.'
                             },
 
                             {
                                 icon: '🏆',
                                 title: 'Executive Search',
-                                desc: 'Confidential leadership hiring supported by market intelligence, targeted outreach, and rigorous assessment.'
+                                desc: 'Confidential executive search and leadership hiring supported by market intelligence, targeted outreach, and rigorous candidate assessment.'
                             },
 
                             {
                                 icon: '💻',
-                                title: 'IT Services and Consulting',
-                                desc: 'Technology staffing, software development, web applications, and consulting solutions tailored to business needs.'
+                                title: 'IT Recruitment & Consulting',
+                                desc: 'Specialised IT recruitment, software development staffing, and technology consulting solutions tailored to fast-moving business needs.'
                             },
 
                             {
                                 icon: '📈',
                                 title: 'Marketing Services',
-                                desc: 'Performance-driven marketing strategies including branding, lead generation, digital campaigns, and growth planning.'
+                                desc: 'Performance-driven marketing strategies including branding, lead generation, digital campaigns, and growth planning for hiring and beyond.'
                             },
 
                             {
                                 icon: '🔄',
                                 title: 'Recruitment Process Outsourcing',
-                                desc: 'Embedded recruitment teams that manage the complete hiring lifecycle while you focus on business growth.'
+                                desc: 'Embedded recruitment process outsourcing teams that manage the complete hiring lifecycle while you focus on running your business.'
                             }
                         ].map((s, i) => (
                             <div key={s.title} className={`service-card fade-up delay-${i % 3 + 1}`}>
@@ -235,13 +235,13 @@ export default function HomePage() {
                     <div className="text-center">
                         <div className="section-label">How We Work</div>
                         <h2 className="section-heading">From Brief to Hire<br />in 4 Steps</h2>
-                        <p className="section-sub">Our proven 4-step process ensures every engagement is precise, fast, and built on deep understanding of your business.</p>
+                        <p className="section-sub">Our proven 4-step hiring process ensures every recruitment engagement is precise, fast, and built on a deep understanding of your business and talent acquisition goals.</p>
                     </div>
                     <div className="process-steps">
                         {[
-                            { num: '01', title: 'Discovery & Briefing', desc: 'We begin with a thorough consultation to understand your hiring needs, culture, and success criteria.' },
-                            { num: '02', title: 'Search & Screening', desc: 'Our specialists run targeted searches and rigorously evaluate candidates for skills, fit, and reliability.' },
-                            { num: '03', title: 'Shortlist & Interviews', desc: 'You receive a curated shortlist of 3–5 qualified candidates, ready for your review and interview.' },
+                            { num: '01', title: 'Discovery & Briefing', desc: 'We begin with a thorough consultation to understand your hiring needs, company culture, and success criteria for the role.' },
+                            { num: '02', title: 'Search & Screening', desc: 'Our recruitment specialists run targeted candidate searches and rigorously evaluate skills, experience, and reliability.' },
+                            { num: '03', title: 'Shortlist & Interviews', desc: 'You receive a curated shortlist of 3–5 qualified candidates from our talent pool, ready for your review and interview.' },
                             { num: '04', title: 'Offer & Onboarding', desc: 'We manage the offer process and support onboarding to ensure a smooth, confident start for your new hire.' },
                         ].map(step => (
                             <div key={step.num} className="process-step fade-up">
@@ -265,12 +265,12 @@ export default function HomePage() {
                     </div>
                     <div className="why-grid">
                         {[
-                            { num: '01', title: 'Speed Without Compromise', desc: 'Our streamlined process delivers pre-screened candidates within days, not weeks. Every shortlist is built for quality, not volume.' },
-                            { num: '02', title: 'Industry-Specific Expertise', desc: 'We don\'t generalise. Our recruitment specialists are domain experts who speak your industry\'s language.' },
-                            { num: '03', title: 'Precision Matching', desc: 'Beyond skills, we evaluate culture fit, growth mindset, and long-term alignment — reducing costly mis-hires.' },
+                            { num: '01', title: 'Speed Without Compromise', desc: 'Our streamlined recruitment process delivers pre-screened candidates within days, not weeks. Every shortlist is built for quality, not volume.' },
+                            { num: '02', title: 'Industry-Specific Expertise', desc: 'We don\'t generalise. Our recruitment specialists are domain experts in IT, executive, and sector-specific hiring who speak your industry\'s language.' },
+                            { num: '03', title: 'Precision Matching', desc: 'Beyond skills, we evaluate culture fit, growth mindset, and long-term alignment — reducing costly mis-hires and improving retention.' },
                             { num: '04', title: 'Confidentiality First', desc: 'All executive and sensitive searches are handled with absolute discretion, protecting your strategy and candidates alike.' },
-                            { num: '05', title: 'Dedicated Partnership', desc: 'A single point of contact manages your account, understands your team dynamics, and delivers consistent results.' },
-                            { num: '06', title: 'Post-Placement Support', desc: 'Our relationship doesn\'t end at offer acceptance. We support onboarding and early performance alignment.' },
+                            { num: '05', title: 'Dedicated Partnership', desc: 'A single point of contact manages your account, understands your team dynamics, and delivers consistent hiring results.' },
+                            { num: '06', title: 'Post-Placement Support', desc: 'Our relationship doesn\'t end at offer acceptance. We support onboarding and early performance alignment for every placement.' },
                         ].map(w => (
                             <div key={w.num} className="why-card fade-up">
                                 <div className="why-num">{w.num}</div>
@@ -288,7 +288,7 @@ export default function HomePage() {
             <div className="cta-banner">
                 <div style={{ position: 'relative', zIndex: 1 }}>
                     <h2>Ready to Build Your Dream Team?</h2>
-                    <p>Partner with ChronoHire and experience recruitment that's Fast, Precise, and Reliable. Let's get started today.</p>
+                    <p>Partner with ChronoHire, a trusted recruitment agency and job consultancy, and experience hiring that's fast, precise, and reliable. Explore career opportunities or request talent and let's get started today.</p>
                     <div className="cta-btns">
                         <button className="btn-white" onClick={() => navigate("/contact")}>Request Talent</button>
                         <button className="btn-outline" style={{ borderColor: 'rgba(255,255,255,.4)', color: 'white' }} onClick={() => navigate("/jobs")}>Browse Jobs</button>
@@ -301,4 +301,3 @@ export default function HomePage() {
         </>
     );
 }
-
