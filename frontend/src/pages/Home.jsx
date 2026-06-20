@@ -26,12 +26,11 @@ export default function HomePage() {
                             India's Fast-Growing Recruitment Partner
                         </div>
                         <h1 className="hero-heading fade-up delay-1">
-                            Recruitment & Hiring Solutions for <br />
-                            <span className="teal">Growing Businesses</span>
+                            Hire Smarter,<br />
+                            <span className="teal">Grow Faster</span>
                         </h1>
-
                         <p className="hero-sub fade-up delay-2">
-                            ChronoHire is a leading recruitment and talent acquisition company helping businesses hire top professionals and helping job seekers discover rewarding career opportunities across India. Our fast, reliable, and data-driven hiring process connects the right talent with the right organizations.
+                            ChronoHire connects top-tier talent with ambitious companies through precise, reliable, and time-efficient recruitment. We don't just fill positions — we build teams.
                         </p>
                         <div className="hero-btns fade-up delay-3">
                             <button
