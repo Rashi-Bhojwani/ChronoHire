@@ -61,17 +61,31 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Vision */}
-      <section className="section" style={{ background: 'var(--bg)' }}>
+      <section className="section" style={{ background: "var(--bg)" }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
+          <div className="mission-grid">
             {[
-              { icon: '🎯', title: 'Our Mission', text: 'To eliminate hiring friction for businesses and career barriers for professionals — by delivering fast, precise, and reliable recruitment solutions powered by expertise and human connection.' },
-              { icon: '🔭', title: 'Our Vision', text: 'To be India\'s most trusted recruitment partner, known not for the volume of placements but for the quality and longevity of every match we make.' },
-            ].map(mv => (
-              <div key={mv.title} style={{ background: 'white', borderRadius: 24, padding: 48, border: '1px solid var(--border)' }}>
-                <div style={{ fontSize: '2.5rem', marginBottom: 16 }}>{mv.icon}</div>
-                <h3 style={{ fontFamily: 'Syne, sans-serif', fontSize: '1.4rem', fontWeight: 800, color: 'var(--charcoal)', marginBottom: 16 }}>{mv.title}</h3>
-                <p style={{ color: 'var(--slate)', lineHeight: 1.75 }}>{mv.text}</p>
+              {
+                icon: "🎯",
+                title: "Our Mission",
+                text: "To eliminate hiring friction for businesses and career barriers for professionals — by delivering fast, precise, and reliable recruitment solutions powered by expertise and human connection.",
+              },
+              {
+                icon: "🔭",
+                title: "Our Vision",
+                text: "To be India's most trusted recruitment partner, known not for the volume of placements but for the quality and longevity of every match we make.",
+              },
+            ].map((mv) => (
+              <div key={mv.title} className="mission-card">
+                <div className="mission-icon">{mv.icon}</div>
+
+                <h3 className="mission-title">
+                  {mv.title}
+                </h3>
+
+                <p className="mission-text">
+                  {mv.text}
+                </p>
               </div>
             ))}
           </div>

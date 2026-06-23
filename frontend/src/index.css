@@ -344,6 +344,115 @@
     font-size: .75rem; font-weight: 700; flex-shrink: 0;
   }
 
+  /* ===========================
+   Mission & Vision
+=========================== */
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.mission-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 48px;
+    transition: 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.mission-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.mission-title {
+    font-family: "Syne", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+}
+
+.mission-text {
+    color: var(--slate);
+    line-height: 1.8;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width: 992px) {
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .mission-card {
+        padding: 36px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mission-card {
+        padding: 24px;
+        border-radius: 18px;
+    }
+
+    .mission-title {
+        font-size: 1.25rem;
+    }
+
+    .mission-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .mission-icon {
+        font-size: 2rem;
+    }
+
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width: 480px) {
+
+    .mission-card {
+        padding: 20px;
+    }
+
+    .mission-title {
+        font-size: 1.1rem;
+    }
+
+    .mission-text {
+        font-size: 14px;
+    }
+
+}
+
   /* ─── SERVICES ─── */
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
   .service-card {
