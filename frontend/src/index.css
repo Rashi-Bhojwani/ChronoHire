@@ -344,6 +344,39 @@
     font-size: .75rem; font-weight: 700; flex-shrink: 0;
   }
 
+  .about-image-container {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+@media (min-width: 769px) {
+    .about-image-container {
+        min-height: 400px;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-image-container {
+        min-height: auto;
+    }
+
+    .about-image {
+        height: auto;
+    }
+}
+
   /* ===========================
    Mission & Vision
 =========================== */
@@ -373,7 +406,7 @@
 }
 
 .mission-title {
-    font-family: "Syne", sans-serif;
+    font-family: "Clash Display", sans-serif;
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--charcoal);

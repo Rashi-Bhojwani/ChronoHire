@@ -38,22 +38,12 @@ export default function AboutPage() {
               </p>
             </div>
             <div
-              className="fade-in delay-2"
-              style={{
-                borderRadius: 24,
-                minHeight: 400,
-                overflow: "hidden",
-              }}
+              className="fade-in delay-2 about-image-container"
             >
               <img
                 src="/images/AboutUs.PNG"
                 alt="About ChronoHire"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "24px",
-                }}
+                className="about-image"
               />
             </div>
           </div>
